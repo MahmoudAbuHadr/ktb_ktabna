@@ -153,17 +153,17 @@
         <a style="text-decoration: none;" href="https://goo.gl/maps/BvoFHtwSFpcuYJfa8">📍</a>
       </h3>
       <p class="text-center">
-        <a class="mail" href="mailto:prof.o.soliman@gmail.com">تنورونا 😘</a>
+        <a>تنورونا 😘</a>
       </p>
       <p class="text">
-        بعد <span id="daysLeft"></span> يوم أو
+        بعد <span id="daysLeft"></span> يوم 
         <span id="hoursLeft"></span> ساعة أو
         <!-- <span id="minutesLeft"></span> دقيقة أو
         <span id="secondsLeft"></span> ثانية -->
       </p>
     </div>
     <script>
-      const weddingTime = new Date("2021-11-012T21:00:00+02:00").getTime();
+      const weddingTime = new Date("2021-11-12T21:00:00+02:00").getTime();
       setInterval(() => {
         const currentTime = Date.now() ;
         const diffInMS = weddingTime - currentTime;
