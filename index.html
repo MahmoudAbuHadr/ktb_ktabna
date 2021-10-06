@@ -157,20 +157,12 @@
         تنورونا 😘</h3>
       </p>
       <p class="text">
-        بعد <span id="daysLeft"></span> يوم أو 
+        <span id="daysLeft"></span> يوم - <span id="hoursLeft"></span> ساعه - <span id="minutesLeft"></span> دقيقه - <span id="secondsLeft"></span> ثانيه
         </p>
-        <p class="text">
-        <span id="hoursLeft"></span> ساعة أو
-      </p>
-       <p class="text">
-        <span id="minutesLeft"></span> دقيقة أو
-        </p>
-         <p class="text">
-        <span id="secondsLeft"></span> ثانية
-        </p>
+    
     </div>
     <script>
-      const weddingTime = new Date("2021-11-12T21:00:00+02:00").getTime();
+      const weddingTime = new Date("2021-11-12T15:00:00+02:00").getTime();
       setInterval(() => {
         const currentTime = Date.now() ;
         const diffInMS = weddingTime - currentTime;
@@ -187,13 +179,16 @@
         return Math.trunc(ms / 1000 / 60 / 60 / 24);
       }
       function msToHours(ms) {
-        return Math.trunc(ms / 1000 / 60 / 60);
+        const diffMs = ms - msToDays(ms) * 1000 * 60 * 60 * 24;
+        return Math.trunc(diffMs / 1000 / 60 / 60)  ;
       }
       function msToMinutes(ms) {
-        return Math.trunc(ms /1000/ 60);
+        const diffMs = ms - msToHours(ms) * 1000 * 60 * 60 -  msToDays(ms) * 1000 * 60 * 60 * 24;
+        return Math.trunc(diffMs /1000/ 60);
       }
       function msToSeconds(ms) {
-        return Math.trunc(ms / 1000);
+        const diffMs = ms - msToMinutes(ms)* 1000 * 60  - msToHours(ms) * 1000 * 60 * 60 -  msToDays(ms) * 1000 * 60 * 60 * 24
+        return Math.trunc(diffMs / 1000);
       }
     </script>
   </body>
