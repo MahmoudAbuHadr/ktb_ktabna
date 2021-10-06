@@ -153,14 +153,20 @@
         <a style="text-decoration: none;" href="https://goo.gl/maps/BvoFHtwSFpcuYJfa8">📍</a>
       </h3>
       <p class="text-center">
-        <a>تنورونا 😘</a>
+        <h3>تنورونا 😘</h3>
       </p>
       <p class="text">
-        بعد <span id="daysLeft"></span> يوم 
+        بعد <span id="daysLeft"></span> يوم أو 
+        </p>
+        <p class="text">
         <span id="hoursLeft"></span> ساعة أو
-        <!-- <span id="minutesLeft"></span> دقيقة أو
-        <span id="secondsLeft"></span> ثانية -->
       </p>
+       <p class="text">
+        <span id="minutesLeft"></span> دقيقة أو
+        </p>
+         <p class="text">
+        <span id="secondsLeft"></span> ثانية
+        </p>
     </div>
     <script>
       const weddingTime = new Date("2021-11-12T21:00:00+02:00").getTime();
@@ -169,12 +175,12 @@
         const diffInMS = weddingTime - currentTime;
         document.getElementById("daysLeft").innerHTML = msToDays(diffInMS);
         document.getElementById("hoursLeft").innerHTML = msToHours(diffInMS);
-        /*
+        
         document.getElementById("minutesLeft").innerHTML =
           msToMinutes(diffInMS);
         document.getElementById("secondsLeft").innerHTML =
           msToSeconds(diffInMS);
-          */
+          
       }, 1000);
       function msToDays(ms) {
         return Math.trunc(ms / 1000 / 60 / 60 / 24);
