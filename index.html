@@ -149,7 +149,7 @@
         ❤️ محمود و ياسمين ❤️
       </h2>
       <h3 class="text">
-        كتب كتابنا ان شاء الله <span class="underline">٩/٩</span> <span class="underline">الساعة ٣</span>
+        كتب كتابنا ان شاء الله <span class="underline">١١/١٢</span> <span class="underline">الساعة ٣</span>
         <a style="text-decoration: none;" href="https://goo.gl/maps/BvoFHtwSFpcuYJfa8">📍</a>
       </h3>
       <p class="text-center">
@@ -169,10 +169,12 @@
         const diffInMS = weddingTime - currentTime;
         document.getElementById("daysLeft").innerHTML = msToDays(diffInMS);
         document.getElementById("hoursLeft").innerHTML = msToHours(diffInMS);
+        /*
         document.getElementById("minutesLeft").innerHTML =
           msToMinutes(diffInMS);
         document.getElementById("secondsLeft").innerHTML =
           msToSeconds(diffInMS);
+          */
       }, 1000);
       function msToDays(ms) {
         return Math.trunc(ms / 1000 / 60 / 60 / 24);
